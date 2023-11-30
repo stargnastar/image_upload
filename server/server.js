@@ -7,9 +7,9 @@ const PORT=5000; //사용한 포트번호를 선언
 
 
 // 라우터 만들기
-app.post("/upload", (req, res)=>{
-    console.log("/upload called!");
-    res.json({result:"success"});
+app.post("/upload", upload.single("imageTest"), (req, res)=>{ //image라는 이름의 단일 파일을 업로드 함
+    console.log(req.file);
+    res.json(req.file);
 })
 
 
