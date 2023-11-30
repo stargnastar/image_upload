@@ -1,4 +1,6 @@
-const express=require('express') //express를 불러옴
+const express=require('express'); //express를 불러옴
+const multer=require('multer'); //multer라이브러리를 불러옴
+const upload=multer({ dest : "uploads" }); //업로드 경로를 설정
 
 const app=express(); //앱을 만들어줌
 const PORT=5000; //사용한 포트번호를 선언
